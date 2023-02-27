@@ -570,7 +570,7 @@ img[alt=like] {
   bottom: -80px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .price-block {
     justify-content: center;
   }
@@ -581,5 +581,57 @@ img[alt=like] {
 @media (max-width: 400px) {
   .price-block__card {
     margin: 10px;
+  }
+}
+.step {
+  position: relative;
+  text-align: center;
+}
+.step:last-child:before {
+  display: none;
+}
+.step:before {
+  content: "";
+  position: absolute;
+  width: 67%;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.8);
+  display: block;
+  top: 15%;
+  right: -46%;
+}
+.step__title {
+  font-size: 18px;
+}
+.step__text {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.step__image {
+  height: 70px;
+}
+.steps {
+  background-color: #f1f1f1;
+}
+.steps-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1199.98px) {
+  .step:before {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .step {
+    flex-basis: 33.33%;
+  }
+}
+@media (max-width: 768px) {
+  .step {
+    flex-basis: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
