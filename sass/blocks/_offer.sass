@@ -2,10 +2,15 @@
     padding: 129px 0
     &-block
         background: #fff url(../img/form/form-bg.jpg) no-repeat center right
-        background-size: contain
         padding: 80px
         margin-top: -200px
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+        &__calc-bg
+            background: #fff url(../img/form/form-bg-calc.jpg) no-repeat center right
+            background-size: contain
+        &__price-bg
+            background: #fff url(../img/form/form-bg-price.jpg) no-repeat center right
+            background-size: contain
     &__title
         font-size: 25px
         text-transform: uppercase
@@ -15,6 +20,7 @@
         display: block
         margin-bottom: 48px
         font-size: 21px
+        max-width: 800px
 
 .form
     &__row
@@ -38,18 +44,26 @@
     &__button
         height: 80px
         width: 100%
+    &__policy
+        display: inline-block
+        margin-left: 45px
+        font-size: 17px
+        min-width: 200px
 
 @media (max-width: 1199.98px)
     .offer
         &-block
             background-position: center right -120px
 
-@media (max-width: 768px)
+@media (max-width: 991.98px)
     .offer
         &-block
             background: none
             background-color: #fff
             padding: 40px
+
+@media (max-width: 768px)
+    .offer
         &__title
             font-size: 18px
         &__suptitle
@@ -64,7 +78,9 @@
             width: 100% 
         &__input
             margin-bottom: 20px
-
+        &__policy
+            margin-left: 0
+            margin-top: 30px
 
 @media (max-width: 480px)
     .form

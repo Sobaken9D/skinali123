@@ -1,0 +1,36 @@
+.reviews
+    background-color: #f5f6f8
+    &-slider
+        display: flex
+        justify-content: space-between
+        &__item
+            text-align: center
+        &__text
+            position: relative
+            font-style: italic
+            font-size: 16px
+            max-width: 370px
+            padding: 20px
+            background-color: #fff
+            border-radius: 11px
+            margin-bottom: 20px
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1)
+            &:after
+                position: absolute
+                display: block
+                top: 100%
+                left: 50%
+                transform: translateX(-50%)
+                content: ''
+                height: 10px
+                border: 10px solid transparent
+                border-top: 10px solid #fff
+        &__image
+            display: block
+            height: 70px
+            width: 70px
+            border: 2px solid #6a99e9
+            border-radius: 50%
+            margin: 20px auto
+        &__name
+            +bold

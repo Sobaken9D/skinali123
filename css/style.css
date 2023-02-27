@@ -282,10 +282,17 @@ img {
 }
 .offer-block {
   background: #fff url(../img/form/form-bg.jpg) no-repeat center right;
-  background-size: contain;
   padding: 80px;
   margin-top: -200px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.offer-block__calc-bg {
+  background: #fff url(../img/form/form-bg-calc.jpg) no-repeat center right;
+  background-size: contain;
+}
+.offer-block__price-bg {
+  background: #fff url(../img/form/form-bg-price.jpg) no-repeat center right;
+  background-size: contain;
 }
 .offer__title {
   font-size: 25px;
@@ -297,6 +304,7 @@ img {
   display: block;
   margin-bottom: 48px;
   font-size: 21px;
+  max-width: 800px;
 }
 
 .form__row {
@@ -327,18 +335,26 @@ img {
   height: 80px;
   width: 100%;
 }
+.form__policy {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 17px;
+  min-width: 200px;
+}
 
 @media (max-width: 1199.98px) {
   .offer-block {
     background-position: center right -120px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   .offer-block {
     background: none;
     background-color: #fff;
     padding: 40px;
   }
+}
+@media (max-width: 768px) {
   .offer__title {
     font-size: 18px;
   }
@@ -357,6 +373,10 @@ img {
   }
   .form__input {
     margin-bottom: 20px;
+  }
+  .form__policy {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
 @media (max-width: 480px) {
@@ -634,4 +654,63 @@ img[alt=like] {
   .step {
     flex-basis: 100%;
   }
+}
+.reviews {
+  background-color: #f5f6f8;
+}
+.reviews-slider {
+  display: flex;
+  justify-content: space-between;
+}
+.reviews-slider__item {
+  text-align: center;
+}
+.reviews-slider__text {
+  position: relative;
+  font-style: italic;
+  font-size: 16px;
+  max-width: 370px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 11px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.reviews-slider__text:after {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  height: 10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+.reviews-slider__image {
+  display: block;
+  height: 70px;
+  width: 70px;
+  border: 2px solid #6a99e9;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+.reviews-slider__name {
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+
+.factory-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.factory-block__text {
+  margin-left: 70px;
+  flex-basis: 50%;
+  font-size: 20px;
+}
+.factory-block__image {
+  margin: 20px 0;
+  max-width: 350px;
+  max-height: 260px;
 }/*# sourceMappingURL=style.css.map */
