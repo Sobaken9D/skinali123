@@ -735,6 +735,9 @@ img[alt=like] {
   width: 30px;
   height: 30px;
 }
+.contacts__image[src="img/contacts/contact-2.png"] {
+  width: 22px;
+}
 .contacts__text {
   font-size: 16px;
 }
@@ -749,10 +752,92 @@ img[alt=like] {
 @media (max-width: 768px) {
   .contacts-block__item {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .contacts__address {
     max-width: 200px;
     margin: auto;
+  }
+}
+.questions__title {
+  font-size: 30px;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.questions__link {
+  font-size: 20px;
+  color: #507fe1;
+}
+.questions-block {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #262626;
+  color: #fff;
+}
+.footer-block {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer__title {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.footer__subtitle {
+  display: block;
+  margin-bottom: 35px;
+}
+.footer__copy {
+  color: #767676;
+}
+.footer__pay-logo {
+  width: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.footer__contacts {
+  text-align: right;
+}
+.footer__phone {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.footer__mail {
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__sotial-logo {
+  width: 24px;
+  height: 24px;
+  margin-left: 6px;
+}
+
+@media (max-width: 768px) {
+  .footer-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__pay-info {
+    margin-top: 40px;
+  }
+  .footer__contacts {
+    margin-top: 40px;
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
