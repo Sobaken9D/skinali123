@@ -1,0 +1,62 @@
+.before
+    &-slider
+        &-wrap
+            position: relative
+        &-arrows
+        // &__dots
+        //     padding: 0
+        //     margin: 15px auto
+        //     list-style: none
+        //     width: 100%
+        //     display: inline-flex
+        //     justify-content: center
+        //     li
+        //         width: 10px
+        //         height: 10px
+        //         background-color: #d1d1d1
+        //         border-radius: 50%
+        //         margin: 10px
+        //         &:hover
+        //             cursor: pointer
+        //         &.slick-active
+        //             background-color: #5b7fda
+        //     button
+        //         display: none
+
+    
+.arrow
+    display: block
+    cursor: pointer
+    background-color: transparent
+    border: none
+    position: absolute
+    height: 100%
+    top: 50%
+    transform: translateY(-50%)
+    &:focus
+        outline: none
+    &-left
+        left: 0
+        &:before
+            content: ''
+            display: block
+            background-color: transparent
+            border-top: 3px solid $primary
+            border-left: 3px solid $primary
+            transform: rotate(-45deg)
+            width: 30px
+            height: 30px
+            margin-left: 13px
+    &-right
+        right: 0
+        &:before
+            content: ''
+            display: block
+            background-color: transparent
+            border-top: 3px solid $primary
+            border-right: 3px solid $primary
+            transform: rotate(45deg)
+            width: 30px
+            height: 30px
+            margin-right: 13px
+

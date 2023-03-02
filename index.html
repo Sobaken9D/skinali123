@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фабрика скинали</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Фабрика скинали</title>
+    <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
 
@@ -509,6 +510,40 @@
     </section>
     <!-- /.section steps -->
 
+    <section class="section before">
+        <div class="container">
+            <h2 class="section-title section__title">До и после</h2>
+            <div class="before-slider-wrap">
+                <div class="before-slider">
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-after/before.jpg" alt="">
+                            <img src="img/before-after/after.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-after/before.jpg" alt="">
+                            <img src="img/before-after/after.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-after/before.jpg" alt="">
+                            <img src="img/before-after/after.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="before-slider-arrows">
+                    <button class="arrow arrow-left"></button>
+                    <button class="arrow arrow-right"></button>
+                </div>
+                <!-- <div class="before-slider__dots"></div> -->
+            </div>
+            <!-- /.before-slider-wrap -->
+        </div>
+    </section>
+
     <section class="section reviews">
         <div class="container">
             <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -699,5 +734,28 @@
 
 <!-- Подключение виджета обратной связи через соц сети -->
 <script type="text/javascript" src="https://spikmi.org/Widget?Id=16293"></script>
+<script
+	src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous">
+</script>
+<script src="js/jquery.event.move.js"></script>
+<script src="js/jquery.twentytwenty.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+    $(window).load(function() {
+        $(".before-after").twentytwenty({
+            before_label: 'Без скинали',
+            after_label: 'Со скинали'
+        });
+        $('.before-slider').slick({
+            draggable: false,
+            dots: false,
+            // dotsClass: 'before-slider__dots',
+            prevArrow: $('.arrow-left'),
+            nextArrow: $('.arrow-right')
+        });
+    });
+</script>
 </body>
 </html>

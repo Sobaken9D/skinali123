@@ -23,6 +23,92 @@
     padding: 0 20px;
   }
 }
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 @font-face {
   font-family: "Proxima Nova Semibold";
   src: url("../fonts/ProximaNova-Semibold.eot");
@@ -840,4 +926,48 @@ img[alt=like] {
     margin-top: 40px;
     text-align: center;
   }
+}
+.before-slider-wrap {
+  position: relative;
+}
+.arrow {
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.arrow:focus {
+  outline: none;
+}
+.arrow-left {
+  left: 0;
+}
+.arrow-left:before {
+  content: "";
+  display: block;
+  background-color: transparent;
+  border-top: 3px solid #507fe1;
+  border-left: 3px solid #507fe1;
+  transform: rotate(-45deg);
+  width: 30px;
+  height: 30px;
+  margin-left: 13px;
+}
+.arrow-right {
+  right: 0;
+}
+.arrow-right:before {
+  content: "";
+  display: block;
+  background-color: transparent;
+  border-top: 3px solid #507fe1;
+  border-right: 3px solid #507fe1;
+  transform: rotate(45deg);
+  width: 30px;
+  height: 30px;
+  margin-right: 13px;
 }/*# sourceMappingURL=style.css.map */
