@@ -42,9 +42,10 @@
         justify-content: space-around
     &__link
         text-decoration: none
-        font-size: 17px
+        font-size: 14px
         text-transform: uppercase
         color: #fff
+        +bold
     &-button
         display: flex
         flex-direction: column
@@ -56,6 +57,10 @@
         border-left: 1px solid rgba(#510bba, 0.1)
         height: 80px
         width: 70px
+        &:hover
+            cursor: pointer
+        &:focus
+            outline: none
         &__line
             display: block
             width: 20px
@@ -76,6 +81,11 @@
         color: $text-color-light
 
 @media (max-width: 991.98px)
+    .menu
+        &__link
+            margin-right: 15px
+            font-size: 11px
+            width: 10px
     .navbar
         &__mobile, &__landline
             display: none
@@ -85,13 +95,13 @@
         display: none
     .menu
         top: 60px
-        height: 60%
         &-button
             height: 60px
         &__nav
             flex-direction: column
         &__link
-            margin-bottom: 20px
+            margin-bottom: 30px
+            width: auto
             
             
 

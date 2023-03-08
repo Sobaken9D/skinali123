@@ -56,6 +56,49 @@ img
     padding-left: 30px
     border: 1px solid #dddddd
 
+.select
+    height: 80px
+    width: 100%
+    border: 1px solid #dddddd
+    position: relative
+    cursor: pointer
+    &__checked
+        display: flex
+        justify-content: space-between
+        align-items: center
+        line-height: 80px
+        padding-left: 30px
+        &::after
+            content: ''
+            display: block
+            width: 15px
+            height: 15px
+            border-top: 2px solid #ddd
+            border-left: 2px solid #ddd
+            transform: rotate(-135deg)
+            margin-right: 20px
+            margin-bottom: 10px
+    &__dropdown
+        display: none
+        position: absolute
+        top: 80px
+        width: 100%
+        background-color: #fff
+        border: 1px solid #dddddd
+        margin: 0
+        list-style: none
+        padding: 0
+        &_open
+            display: block
+    &__option
+        padding: 25px 0
+        padding-left: 30px
+        &:hover
+            background-color: $bg-secondary
+
+    
+
+
 .checkbox
     display: none
     &:checked + label::before

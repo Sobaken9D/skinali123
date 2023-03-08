@@ -3,25 +3,25 @@
         &-wrap
             position: relative
         &-arrows
-        // &__dots
-        //     padding: 0
-        //     margin: 15px auto
-        //     list-style: none
-        //     width: 100%
-        //     display: inline-flex
-        //     justify-content: center
-        //     li
-        //         width: 10px
-        //         height: 10px
-        //         background-color: #d1d1d1
-        //         border-radius: 50%
-        //         margin: 10px
-        //         &:hover
-        //             cursor: pointer
-        //         &.slick-active
-        //             background-color: #5b7fda
-        //     button
-        //         display: none
+        &__dots
+            padding: 0
+            margin: 15px auto
+            list-style: none
+            width: 100%
+            display: inline-flex
+            justify-content: center
+            li
+                width: 10px
+                height: 10px
+                background-color: #d1d1d1
+                border-radius: 50%
+                margin: 10px
+                &:hover
+                    cursor: pointer
+                &.slick-active
+                    background-color: #5b7fda
+            button
+                display: none
 
     
 .arrow
@@ -31,7 +31,7 @@
     border: none
     position: absolute
     height: 100%
-    top: 50%
+    top: 43%
     transform: translateY(-50%)
     &:focus
         outline: none
@@ -60,3 +60,11 @@
             height: 30px
             margin-right: 13px
 
+@media (max-width: 480px)
+    .arrow
+        &-left
+            &:before
+                margin-left: 0
+        &-right
+            &:before
+                margin-right: 0

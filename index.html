@@ -77,7 +77,14 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label for="" class="form__label">Вид стекла</label>
-                            <input type="text" class="input form__input">
+                            <input type="hidden" name="type" id="select-type" value="С печатью">
+                            <div class="select form__select">
+                                <span class="select__checked">С печатью</span>
+                                <ul class="select__dropdown">
+                                    <li class="select__option" data-value="С печатью">С печатью</li>
+                                    <li class="select__option" data-value="Без печати">Без печати</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form__group">
                             <label for="" class="form__label">Ширина, см</label>
@@ -750,12 +757,26 @@
         });
         $('.before-slider').slick({
             draggable: false,
-            dots: false,
-            // dotsClass: 'before-slider__dots',
+            dots: true,
+            dotsClass: 'before-slider__dots',
             prevArrow: $('.arrow-left'),
             nextArrow: $('.arrow-right')
+        });
+        $('.menu-button').on('click', function(){
+            $('.menu').toggleClass('menu_active')  
+        });
+
+        // select
+
+        $('.select').on('click', function(){
+            $('.select__dropdown').toggleClass('select__dropdown_open')  
+        });
+        $('.select__option').on('click', function(){
+            let value = $(this).attr('data-value');
+            console.log(value);
         });
     });
 </script>
 </body>
 </html>
+
